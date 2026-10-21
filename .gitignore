@@ -1,0 +1,6 @@
+# Original, unoptimised photos stay local; the site only uses assets/img/web/
+assets/img/*
+!assets/img/web/
+assets/video/
+desktop.ini
+Thumbs.db
