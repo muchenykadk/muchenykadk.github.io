@@ -104,7 +104,7 @@
     '<p class="section__note">' + esc(cv.teaching.note) + "</p>" +
     '<ul class="rows">' + cv.teaching.items.map(function (t) {
       return row(t.term,
-        "<h3>" + esc(t.course) + '<span class="tag tag--level">' + esc(t.level) + "</span></h3>" +
+        "<h3>" + maybeLink(t.link, esc(t.course)) + '<span class="tag tag--level">' + esc(t.level) + "</span></h3>" +
         '<p class="meta">' + esc(t.topic) + "</p>");
     }).join("") + "</ul>" });
 

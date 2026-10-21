@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------------
    All CV content lives here. Edit this file to update the site.
-   - link: optional URL; leave "" to show no link
+   - link: optional URL; leave "" (or omit) to show no link
    - images: optional list of { src, pos } in assets/img/web/; the first is the cover,
      the rest fade in on hover. pos = CSS object-position for the crop (e.g. "50% 70%").
      Once any project has images, projects show as image cards.
@@ -43,7 +43,7 @@ window.CV = {
       images: [
         { src: "assets/img/web/features-design-data.jpg", pos: "50% 50%" }
       ],
-      link: ""
+      link: "https://www.uibk.ac.at/en/research/research-funding/postdoc/esf/"
     },
     {
       year: "2024-2025",
@@ -117,8 +117,8 @@ window.CV = {
   teaching: {
     note: "Seminars and workshops, University of Innsbruck",
     items: [
-      { term: "WS 2026/27", course: "Specialization Structure and Design: Prototyping", level: "Master", topic: "Reuse Intelligence: AI for circularity" },
-      { term: "SS 2026", course: "Structure and Ecology", level: "Master", topic: "Robotic fabrication for reciprocal structures" },
+      { term: "WS 2026/27", course: "Specialization Structure and Design: Prototyping", level: "Master", topic: "Reuse Intelligence: AI for circularity", link: "https://www.structureanddesign.at/prototyping-seminar-5/" },
+      { term: "SS 2026", course: "Structure and Ecology", level: "Master", topic: "Robotic fabrication for reciprocal structures", link: "https://www.structureanddesign.at/structure-geometry-2/" },
       { term: "SS 2024-2026", course: "Methods of Materialization", level: "Bachelor", topic: "Computational design methods with reused materials" },
       { term: "WS 2025/26", course: "Methods in Construction and Design", level: "Bachelor", topic: "Digital design for bio-integrative structures and robotic prototyping" },
       { term: "SS 2025", course: "Specialization Structure and Design: Prototyping", level: "Master", topic: "Digital fabrication and construction" },
@@ -127,7 +127,7 @@ window.CV = {
   },
 
   grants: [
-    { year: "2026", title: "Early Stage Funding", detail: "Project leader and applicant — Waste Quarrying: Developing an Action-Oriented Framework for Cascading Reuse of Demolition Concrete", link: "" },
+    { year: "2026", title: "Early Stage Funding (ESF), University of Innsbruck", detail: "Project leader and applicant — Waste Quarrying: Developing an Action-Oriented Framework for Cascading Reuse of Demolition Concrete. Competitive grant from the Vice-Rectorate for Research for an independent 12-month research project by early-career researchers.", link: "https://www.uibk.ac.at/en/research/research-funding/postdoc/esf/" },
     { year: "2015-2018", title: "Melbourne Global Scholarship", detail: "University of Melbourne", link: "" }
   ],
 
