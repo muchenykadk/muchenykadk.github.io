@@ -23,6 +23,17 @@ window.CV = {
   projects: [
     {
       year: "2026",
+      title: "Waste Quarrying",
+      subtitle: "An action-oriented framework for cascading reuse of demolition concrete",
+      where: "University of Innsbruck · Early Stage Funding",
+      role: "Project leader and applicant",
+      images: [
+        { src: "assets/img/web/features-design-data.jpg", pos: "50% 50%" }
+      ],
+      link: "https://www.uibk.ac.at/en/research/research-funding/postdoc/esf/"
+    },
+    {
+      year: "2026",
       title: "Arbor+",
       subtitle: "Robotic fabricated reciprocal structure",
       where: "i.sd Structure and Design, University of Innsbruck",
@@ -33,17 +44,6 @@ window.CV = {
         { src: "assets/img/web/arbor-3.jpg", pos: "45% 50%" }
       ],
       link: ""
-    },
-    {
-      year: "2026",
-      title: "Waste Quarrying",
-      subtitle: "An action-oriented framework for cascading reuse of demolition concrete",
-      where: "University of Innsbruck · Early Stage Funding",
-      role: "Project leader and applicant",
-      images: [
-        { src: "assets/img/web/features-design-data.jpg", pos: "50% 50%" }
-      ],
-      link: "https://www.uibk.ac.at/en/research/research-funding/postdoc/esf/"
     },
     {
       year: "2024-2025",
@@ -148,7 +148,7 @@ window.CV = {
       points: [
         "Research on digital design and fabrication for circular construction, with a focus on concrete upcycling strategies and design methods",
         "Teaching seminars and workshops on computational design and materialisation",
-        "Leading the research-practice projects Arbor+ (2026) and Reuse Garden (2024-2025)"
+        "Leading the research projects Waste Quarrying (2026) and Reuse Garden (2024-2025)"
       ],
       link: ""
     },
