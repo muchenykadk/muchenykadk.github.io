@@ -33,7 +33,14 @@
     <p style="padding:40px;font-family:sans-serif">This page needs JavaScript. <a href="assets/CV_MuchenYan.pdf">Download the CV as PDF</a>.</p>
   </noscript>
 
-  <script src="data.js"></script>
-  <script src="main.js"></script>
+  <script>
+    // Load content and scripts uncached so edits show up immediately (GitHub Pages caches files for 10 min)
+    ["data.js", "main.js"].forEach(function (src) {
+      var s = document.createElement("script");
+      s.src = src + "?v=" + Date.now();
+      s.async = false;
+      document.body.appendChild(s);
+    });
+  </script>
 </body>
 </html>
