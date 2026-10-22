@@ -179,7 +179,7 @@ window.CV = {
     {
       year: "2023-2024",
       org: "MAEID",
-      position: "Assistant Designer / Architect",
+      position: "Designer / Architect",
       place: "Full-time, Innsbruck",
       points: [
         "Design development and detail design (stage 3): translated design concepts into resolved architectural, interior and exhibition details for Microbia, a 1,000 m² museum of biology and interactivity in an adaptively reused building",
