@@ -182,7 +182,7 @@ window.CV = {
       position: "Assistant Designer / Architect",
       place: "Full-time, Innsbruck",
       points: [
-        "Microbia, a museum about biology and interactivity (about 1,000 m²): worked mainly on design development and detail design (stage 3) for the adaptive reuse of the building, the interior and the exhibition",
+        "Design development and detail design (stage 3): translated design concepts into resolved architectural, interior and exhibition details for Microbia, a 1,000 m² museum of biology and interactivity in an adaptively reused building",
         "Built parametric Grasshopper workflows for efficient 3D modelling and design across projects",
         "Completed competition entries, including the Austrian Pavilion at the Venice Architecture Biennale 2025 and an artistic intervention in Italy",
         "Assisted with a business research funding application"
