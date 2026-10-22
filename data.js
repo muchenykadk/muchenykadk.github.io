@@ -182,7 +182,8 @@ window.CV = {
       position: "Assistant Designer / Architect",
       place: "Full-time, Innsbruck",
       points: [
-        "Designer for architecture projects, specialised in digital design",
+        "Microbia, a museum about biology and interactivity: adaptive reuse design of the building, interior and exhibition design, about 1,000 m² in total",
+        "Built parametric Grasshopper workflows for efficient 3D modelling and design across projects",
         "Completed an artistic intervention competition entry in Italy",
         "Completed the competition entry for the Austrian Pavilion at the Venice Architecture Biennale 2025",
         "Assisted with a business research funding application"
