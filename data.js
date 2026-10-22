@@ -179,29 +179,39 @@ window.CV = {
     {
       year: "2023-2024",
       org: "MAEID",
-      position: "Designer",
-      place: "Innsbruck, Austria",
+      position: "Assistant Designer / Architect",
+      place: "Full-time, Innsbruck",
       points: [
-        "Three competition entries, including the Vienna Architecture Biennale and the Austrian Pavilion at the Biennale",
-        "Ammarchia Museum: adaptive reuse of the architecture, interior design and exhibition design, about 1,000 m² in total"
+        "Designer for architecture projects, specialised in digital design",
+        "Completed an artistic intervention competition entry in Italy",
+        "Completed the competition entry for the Austrian Pavilion at the Venice Architecture Biennale 2025",
+        "Assisted with a business research funding application"
       ],
       link: ""
     },
     {
       year: "2020",
-      org: "Liu Yuyang Atelier",
-      position: "Junior Designer",
-      place: "Shanghai, China",
-      points: ["Concept proposal for a high-end hospital"],
+      org: "Atelier Liu Yuyang Architects",
+      position: "Assistant Architect / Designer",
+      place: "Full-time, Shanghai",
+      points: [
+        "Participated in the sketch design phase of a 9,700 m² private hospital refurbishment project in central Shanghai",
+        "Participated in administration and business development"
+      ],
       link: ""
     },
     {
       year: "2018-2019",
       org: "MNE Architects",
-      position: "Designer / Junior Architect",
-      place: "Melbourne, Australia",
-      points: ["Residential buildings and commercial retail interior design"],
-      link: ""
+      position: "Junior Architect / Designer",
+      place: "Full-time, Melbourne",
+      points: [
+        "Completed the design for four commercial projects (retail and restaurants) and two residential projects",
+        "Contributed to all major stages from early conceptual design, planning and detailing to final completion",
+        "Organised meetings and presented to clients, consultants and councillors"
+      ],
+      link: "https://mnea.com.au/",
+      linkLabel: "MNE Architects"
     }
   ],
 
