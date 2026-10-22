@@ -121,14 +121,17 @@
         '<p class="meta">' + esc(e.where) + (e.role ? " · " + esc(e.role) : "") + "</p>");
     }).join("") + "</ul>" });
 
-  // Experience
-  S.push({ id: "experience", nav: "Experience", title: "Academic experience", html:
-    '<ul class="rows">' + cv.experience.map(function (x) {
+  // Experience (academic and practical share one layout)
+  function experienceRows(list) {
+    return '<ul class="rows">' + list.map(function (x) {
       return row(x.year, title(esc(x.org), x.position) +
         '<p class="meta">' + esc(x.place) + "</p>" +
         '<ul class="points">' + x.points.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + "</ul>" +
         (x.link ? '<div class="more">' + link(x.link, x.linkLabel || "More", "") + "</div>" : ""));
-    }).join("") + "</ul>" });
+    }).join("") + "</ul>";
+  }
+  S.push({ id: "experience", nav: "Experience", title: "Academic experience", html: experienceRows(cv.experience) });
+  S.push({ id: "practice", nav: "Practice", title: "Practical experience", html: experienceRows(cv.practice) });
 
   // Education
   S.push({ id: "education", nav: "Education", title: "Education", html:

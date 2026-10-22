@@ -174,6 +174,37 @@ window.CV = {
     }
   ],
 
+  /* Practical experience in architecture offices (same format as experience) */
+  practice: [
+    {
+      year: "2023-2024",
+      org: "MAEID",
+      position: "Designer",
+      place: "Innsbruck, Austria",
+      points: [
+        "Three competition entries, including the Vienna Architecture Biennale and the Austrian Pavilion at the Biennale",
+        "Ammarchia Museum: adaptive reuse of the architecture, interior design and exhibition design, about 1,000 m² in total"
+      ],
+      link: ""
+    },
+    {
+      year: "2020",
+      org: "Liu Yuyang Atelier",
+      position: "Junior Designer",
+      place: "Shanghai, China",
+      points: ["Concept proposal for a high-end hospital"],
+      link: ""
+    },
+    {
+      year: "2018-2019",
+      org: "MNE Architects",
+      position: "Designer / Junior Architect",
+      place: "Melbourne, Australia",
+      points: ["Residential buildings and commercial retail interior design"],
+      link: ""
+    }
+  ],
+
   education: [
     { year: "2024-present", org: "University of Innsbruck", degree: "PhD-Doctoral programme Architecture", note: "" },
     { year: "2020-2022", org: "Royal Danish Academy (KADK)", degree: "Master of Computation in Architecture", note: "Human-robot collaboration, augmented reality, digital fabrication" },
