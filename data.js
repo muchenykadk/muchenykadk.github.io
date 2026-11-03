@@ -115,11 +115,12 @@ window.CV = {
   ],
 
   teaching: {
-    note: "Seminars and workshops, University of Innsbruck",
+    note: "Lectures, seminars and workshops, University of Innsbruck",
     items: [
       { term: "WS 2026/27", course: "Specialization Structure and Design: Prototyping", level: "Master", topic: "Reuse Intelligence: AI for circularity", link: "https://www.structureanddesign.at/prototyping-seminar-5/" },
       { term: "SS 2026", course: "Structure and Ecology", level: "Master", topic: "Robotic fabrication for reciprocal structures", link: "https://www.structureanddesign.at/structure-geometry-2/" },
       { term: "SS 2024-2026", course: "Methods of Materialization", level: "Bachelor", topic: "Computational design methods with reused materials" },
+      { term: "SS 2025-2026", course: "Structure and Digital Design", level: "Lecture", topic: "Digital Design Methods and Circular Construction" },
       { term: "WS 2025/26", course: "Methods in Construction and Design", level: "Bachelor", topic: "Digital design for bio-integrative structures and robotic prototyping", link: "https://www.linkedin.com/feed/update/urn:li:activity:7445407281376059393/" },
       { term: "SS 2025", course: "Specialization Structure and Design: Prototyping", level: "Master", topic: "Digital fabrication and construction" },
       { term: "WS 2024/25", course: "Structure and Ecology", level: "Bachelor", topic: "Computational design, robotic prototyping and bio-integration" }
