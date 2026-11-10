@@ -4,3 +4,5 @@ assets/img/*
 assets/video/
 desktop.ini
 Thumbs.db
+# Built automatically from data.js on every deploy (scripts/build-cv-pdf.mjs)
+assets/CV_MuchenYan.pdf

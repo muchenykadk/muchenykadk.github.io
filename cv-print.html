@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <title>Muchen Yan — CV</title>
+  <!-- Print layout of the CV. scripts/build-cv-pdf.mjs renders it to assets/CV_MuchenYan.pdf.
+       Content comes from data.js, the same source as the website. -->
+  <style>
+    :root {
+      --ink: #000;
+      --muted: #444;
+      --accent: #000;
+      --pink: #000;
+      --rule: #bbb;
+      --f-display: Arial, Helvetica, sans-serif;
+      --f-body: Arial, Helvetica, sans-serif;
+    }
+    @page { size: A4; margin: 16mm 17mm 18mm;
+      @bottom-left { content: "Muchen Yan — CV"; font: 7pt Arial, sans-serif; color: #444; }
+      @bottom-right { content: counter(page) " / " counter(pages); font: 7pt Arial, sans-serif; color: #444; }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: #fff; color: var(--ink); }
+    body { font: 400 9.4pt/1.45 var(--f-body); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    a { color: inherit; text-decoration: none; }
+    
+
+    header { display: grid; grid-template-columns: 1fr auto; gap: 6mm; align-items: end;
+             padding-bottom: 4mm; border-bottom: 1.2pt solid var(--ink); }
+    h1 { font: 700 20pt/1 var(--f-display); margin: 0 0 1.5mm; letter-spacing: -0.01em; }
+    h1 .dot { color: var(--pink); }
+    .role { color: var(--muted); font-size: 9.6pt; }
+    .contact { text-align: right; font-size: 8.8pt; line-height: 1.6; }
+    .contact span { color: var(--accent); margin-right: 2mm; font-size: 7.6pt; letter-spacing: .06em; text-transform: uppercase; }
+
+    .profile { margin: 4.5mm 0 1mm; }
+
+    section { margin-top: 5.5mm; }
+    h2 { font: 700 9pt/1 var(--f-body); letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+         margin: 0 0 2mm; padding-bottom: 1.6mm; border-bottom: 0.6pt solid var(--rule); break-after: avoid; }
+    .note { color: var(--muted); margin: 0 0 1.5mm; font-size: 8.8pt; }
+    .row { display: grid; grid-template-columns: 26mm 1fr; gap: 3mm; padding: 1.3mm 0; break-inside: avoid; }
+    .year { color: var(--accent); font-variant-numeric: tabular-nums; font-size: 8.8pt; padding-top: .3mm; }
+    .t { font-weight: 600; }
+    .t .sub { font-weight: 400; color: var(--muted); }
+    .t .sub::before { content: " | "; color: var(--rule); }
+    .tag { font-size: 7.4pt; color: var(--accent); border: 0.5pt solid var(--rule); border-radius: 2pt; padding: 0 1.2mm; margin-left: 1.5mm; white-space: nowrap; }
+    .meta { color: var(--muted); }
+    ul.points { margin: .6mm 0 0; padding-left: 3.6mm; }
+    ul.points li { margin: .3mm 0; }
+    ul.points li::marker { color: var(--pink); }
+    .pub .t { font-weight: 400; }
+    .pub em { font-style: normal; font-weight: 600; }
+    footer { margin-top: 7mm; color: var(--muted); font-size: 7.6pt; }
+  </style>
+</head>
+<body>
+  <div id="cv"></div>
+  <script src="data.js"></script>
+  <script>
+  (function () {
+    var cv = window.CV;
+    function esc(s) {
+      return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    }
+    function a(url, html) { return url ? '<a class="ext" href="' + esc(url) + '">' + html + "</a>" : html; }
+    function row(year, inner) { return '<div class="row"><div class="year">' + esc(year) + "</div><div>" + inner + "</div></div>"; }
+    function t(main, sub) { return '<div class="t">' + main + (sub ? '<span class="sub">' + esc(sub) + "</span>" : "") + "</div>"; }
+    function meta(s) { return s ? '<div class="meta">' + s + "</div>" : ""; }
+    function points(list) { return list && list.length ? '<ul class="points">' + list.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + "</ul>" : ""; }
+    function section(title, body, note) { return "<section><h2>" + title + "</h2>" + (note ? '<p class="note">' + esc(note) + "</p>" : "") + body + "</section>"; }
+    function experience(list) {
+      return list.map(function (x) { return row(x.year, t(a(x.link, esc(x.org)), x.position) + meta(esc(x.place)) + points(x.points)); }).join("");
+    }
+
+    var contact = cv.contact.map(function (c) { return "<div><span>" + esc(c.label) + "</span>" + a(c.link, esc(c.value)) + "</div>"; }).join("");
+    contact += '<div><span>Web</span><a class="ext" href="https://muchenykadk.github.io">muchenykadk.github.io</a></div>';
+
+    var html =
+      "<header><div><h1>" + esc(cv.name) + '</h1><div class="role">' + esc(cv.role) + "</div></div>" +
+      '<div class="contact">' + contact + "</div></header>" +
+      '<p class="profile">' + esc(cv.profile) + "</p>";
+
+    html += section("Education", cv.education.map(function (e) {
+      return row(e.year, t(esc(e.org), e.degree) + meta(e.note ? "Focus: " + esc(e.note) : ""));
+    }).join(""));
+
+    html += section("Academic experience", experience(cv.experience));
+    if (cv.practice && cv.practice.length) html += section("Practical experience", experience(cv.practice));
+
+    html += section("Teaching", cv.teaching.items.map(function (x) {
+      return row(x.term, '<div class="t">' + a(x.link, esc(x.course)) + (x.level ? '<span class="tag">' + esc(x.level) + "</span>" : "") + "</div>" + meta(esc(x.topic)));
+    }).join(""), cv.teaching.note);
+
+    html += section("Grants &amp; awards", cv.grants.map(function (g) {
+      return row(g.year, t(a(g.link, esc(g.title))) + meta(esc(g.detail)));
+    }).join(""));
+
+    html += section("Research projects", cv.projects.concat(cv.earlierProjects).map(function (p) {
+      return row(p.year, t(a(p.link, esc(p.title)), p.subtitle) + meta(esc(p.where) + (p.role ? " · " + esc(p.role) : "")));
+    }).join(""));
+
+    html += section("Publications", cv.publications.map(function (p) {
+      var l = (p.links || [])[0];
+      return '<div class="pub">' + row(p.year, '<div class="t">' + esc(p.authors) + " (" + esc(p.year) + "). " +
+        a(l && l.url, "<em>" + esc(p.title) + "</em>") + ". " + esc(p.venue) + (p.status ? ". " + esc(p.status) : "") + ".</div>") + "</div>";
+    }).join(""));
+
+    html += section("Exhibitions", cv.exhibitions.map(function (e) {
+      return row(e.year, t(a(e.link, esc(e.title)), e.subtitle) + meta(esc(e.where)) + points(e.role ? [e.role] : []));
+    }).join(""));
+
+    var d = new Date();
+    html += "<footer>Updated " + d.toLocaleString("en-GB", { month: "long", year: "numeric" }) + " · muchenykadk.github.io</footer>";
+
+    document.getElementById("cv").innerHTML = html;
+  })();
+  </script>
+</body>
+</html>
