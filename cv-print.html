@@ -52,7 +52,6 @@
     ul.points li::marker { color: var(--pink); }
     .pub .t { font-weight: 400; }
     .pub em { font-style: normal; font-weight: 600; }
-    footer { margin-top: 7mm; color: var(--muted); font-size: 7.6pt; }
   </style>
 </head>
 <body>
@@ -112,9 +111,6 @@
     html += section("Exhibitions", cv.exhibitions.map(function (e) {
       return row(e.year, t(a(e.link, esc(e.title)), e.subtitle) + meta(esc(e.where)) + points(e.role ? [e.role] : []));
     }).join(""));
-
-    var d = new Date();
-    html += "<footer>Updated " + d.toLocaleString("en-GB", { month: "long", year: "numeric" }) + " · muchenykadk.github.io</footer>";
 
     document.getElementById("cv").innerHTML = html;
   })();
